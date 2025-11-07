@@ -38,7 +38,6 @@ export default function Home() {
     <div className="home-container">
       <h1>Welcome to EduCraft</h1>
       <p>Learn. Contribute. Grow.</p>
-
       <div className="login-box">
         <input
           placeholder="Full name (for signup)"

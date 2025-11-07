@@ -6,10 +6,10 @@ import Home from "./pages/home";
 import Courses from "./pages/courses";
 import Contribute from "./pages/contribute";
 import Profile from "./pages/profile";
-import AuthSuccess from "./pages/AuthSuccess";
 import Header from "./components/Header";
 import MindmapBot from "./components/mindmapbot/mindmapbot";
 import "./App.css";
+
 function AppContent() {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
@@ -18,25 +18,31 @@ function AppContent() {
     const fetchUser = async () => {
       try {
         const res = await axios.get("/auth/user", { withCredentials: true });
-        setUser(res.data);
-      } catch (err) {
+        if (res.data) {
+          setUser(res.data);
+          if (window.location.pathname === "/" || window.location.pathname === "/profile") {
+            navigate("/courses");
+          }
+        } else {
+          setUser(null);
+        }
+      } catch {
         setUser(null);
       }
     };
     fetchUser();
-  }, []);
+  }, [navigate]);
 
   return (
     <>
       <Header user={user} setUser={setUser} />
       <main style={{ paddingTop: 20 }}>
         <Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/courses" element={<Courses />} />
-  <Route path="/profile" element={<Profile user={user} />} />
-  <Route path="/auth-success" element={<AuthSuccess setUser={setUser} />} />
-</Routes>
-
+          <Route path="/" element={<Home />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/contribute" element={<Contribute user={user} />} />
+          <Route path="/profile" element={<Profile user={user} />} />
+        </Routes>
       </main>
       <MindmapBot />
       <footer style={{ textAlign: "center", padding: 12 }}>

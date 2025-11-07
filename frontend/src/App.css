@@ -1,7 +1,6 @@
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
-  /* Background image with gradient overlay for readability */
   background: linear-gradient(
       rgba(255, 255, 255, 0.85),
       rgba(255, 255, 255, 0.85)
@@ -67,10 +66,10 @@ body {
 .home-container .login-box {
   margin: 20px auto;
   max-width: 420px;
-  background: rgba(255,255,255,0.95);
+  background: rgba(255, 255, 255, 0.95);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 .contribute-page,
 .courses-page {

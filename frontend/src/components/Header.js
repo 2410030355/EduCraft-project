@@ -44,7 +44,7 @@ export default function Header({ user, setUser }) {
           <a
             href={`${process.env.REACT_APP_BACKEND_URL}/auth/google`}
             className="small-btn"
-            style={{ background: "#db4437" }}
+            style={{ background: "#67d5f0ff" }}
           >
             Login with Google
           </a>

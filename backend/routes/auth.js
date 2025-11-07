@@ -4,14 +4,11 @@ const router = express.Router();
 router.get("/google", passport.authenticate("google", { scope: ["profile", "email"] }));
 router.get(
   "/google/callback",
-  passport.authenticate("google", {
-    failureRedirect: `${process.env.CLIENT_URL}/`,
-  }),
+  passport.authenticate("google", { failureRedirect: `${process.env.CLIENT_URL}/` }),
   (req, res) => {
-    res.redirect(`${process.env.CLIENT_URL}/auth/success`);
+    res.redirect(`${process.env.CLIENT_URL}/auth-success`);
   }
 );
-
 router.get("/success", (req, res) => {
   res.redirect(`${process.env.CLIENT_URL}/courses`);
 });
