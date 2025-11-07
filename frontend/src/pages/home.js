@@ -43,7 +43,7 @@ export default function Home() {
         </div>
         <div style={{marginTop:8, color:"green"}}>{msg}</div>
         <div style={{marginTop:12}}>
-          <a href="http://localhost:5000/auth/google" className="start-btn" style={{background:"#db4437"}}>Sign in with Google</a>
+          <a href="https://educraft-project.onrender.com/auth/google" className="start-btn" style={{background:"#db4437"}}>Sign in with Google</a>
         </div>
       </div>
     </div>

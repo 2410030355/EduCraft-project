@@ -13,7 +13,10 @@ const MindmapBot = () => {
     if (!topic.trim()) return;
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/mindmap/generate", { topic });
+      const res = await axios.post(
+  `${process.env.REACT_APP_BACKEND_URL}/mindmap/generate`,
+  { topic }
+);
       setResult(res.data.mindmap);
     } catch (err) {
       setResult("Error generating mindmap. Please try again later.");
