@@ -45,7 +45,7 @@ export default function Header({ user, setUser }) {
             href="https://educraft-project.onrender.com/auth/google"
             className="small-btn"
           >
-            Login with Google
+            google login
           </a>
         )}
       </nav>

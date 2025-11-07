@@ -6,7 +6,7 @@ import Home from "./pages/home";
 import Courses from "./pages/courses";
 import Contribute from "./pages/contribute";
 import Profile from "./pages/profile";
-import Header from "./components/Header";
+import Header from "./components/header";
 import MindmapBot from "./components/mindmapbot/mindmapbot";
 import "./App.css";
 
