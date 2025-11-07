@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import axios from "./axiosConfig";
 
-import Home from "./pages/home";
-import Courses from "./pages/courses";
-import Contribute from "./pages/contribute";
-import Profile from "./pages/profile";
+import Home from "./pages/Home";
+import Courses from "./pages/Courses";
+import Contribute from "./pages/Contribute";
+import Profile from "./pages/Profile";
 import AuthSuccess from "./pages/AuthSuccess";
 import Header from "./components/Header";
 import MindmapBot from "./components/mindmapbot/mindmapbot";
@@ -20,19 +20,12 @@ function AppContent() {
       try {
         const res = await axios.get("/auth/user", { withCredentials: true });
         setUser(res.data);
-
-        // Redirect to courses if at "/" or "/profile"
-        if (window.location.pathname === "/" || window.location.pathname === "/profile") {
-          navigate("/courses");
-        }
       } catch (err) {
         setUser(null);
       }
     };
-
-    const timer = setTimeout(fetchUser, 500);
-    return () => clearTimeout(timer);
-  }, [navigate]);
+    fetchUser();
+  }, []);
 
   return (
     <>
@@ -47,7 +40,9 @@ function AppContent() {
         </Routes>
       </main>
       <MindmapBot />
-      <footer style={{ textAlign: "center", padding: 12 }}>© 2025 EDUCRAFT</footer>
+      <footer style={{ textAlign: "center", padding: 12 }}>
+        © 2025 EDUCRAFT
+      </footer>
     </>
   );
 }

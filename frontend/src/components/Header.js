@@ -8,7 +8,7 @@ export default function Header({ user, setUser }) {
 
   const onLogout = async () => {
     try {
-      await axios.get("/auth/logout");
+      await axios.get("/auth/logout", { withCredentials: true });
       setUser(null);
       navigate("/");
     } catch (err) {
@@ -44,6 +44,7 @@ export default function Header({ user, setUser }) {
           <a
             href={`${process.env.REACT_APP_BACKEND_URL}/auth/google`}
             className="small-btn"
+            style={{ background: "#db4437" }}
           >
             Login with Google
           </a>

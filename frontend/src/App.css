@@ -1,16 +1,12 @@
-/* Global Styles */
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
-  /* Use gradient overlay on top of a background image */
-  background: linear-gradient(135deg, rgba(224, 247, 250,0.7), rgba(255,255,255,0.7)),
-              url('https://images.unsplash.com/photo-1581092795369-6e0c38d4a1c7?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+  background-image: url('https://images.unsplash.com/photo-1581092795369-6e0c38d4a1c7?auto=format&fit=crop&w=1470&q=80');
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #222;
-  min-height: 100vh;
 }
-
-/* Header */
 .header {
   background: linear-gradient(90deg, #81d4fa, #4fc3f7);
   color: white;
@@ -21,63 +17,48 @@ body {
   position: sticky;
   top: 0;
   z-index: 50;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-
 .logo {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-
 .logo img {
   width: 56px;
   height: 56px;
   border-radius: 10px;
 }
-
 .logo .brand h1 {
   margin: 0;
   font-size: 20px;
 }
-
 .logo .brand p {
   margin: 0;
   font-size: 12px;
   opacity: 0.9;
 }
-
 .header nav a {
   margin-left: 12px;
   color: white;
   text-decoration: none;
-  font-weight: 500;
 }
-
-/* Buttons */
-.start-btn, .small-btn {
+.start-btn,
+.small-btn {
   background: #0a2e73;
   color: #fff;
   border: none;
   padding: 8px 12px;
   border-radius: 8px;
   cursor: pointer;
-  transition: 0.2s all;
-}
-.start-btn:hover, .small-btn:hover {
-  background: #06325b;
 }
 .small-btn {
   margin-left: 10px;
   font-size: 14px;
 }
-
-/* Home Page */
 .home-container {
   text-align: center;
   padding: 40px;
 }
-
 .home-container .login-box {
   margin: 20px auto;
   max-width: 420px;
@@ -86,45 +67,32 @@ body {
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
-
-/* Contribute & Courses Page */
-.contribute-page, .courses-page {
+.contribute-page,
+.courses-page {
   max-width: 1000px;
   margin: 18px auto;
   padding: 12px;
 }
-
-.contribute-form, .contribute-page .contribute-form {
-  max-width: 720px;
-  margin: 14px auto;
-}
-
-.contribute-form input, .contribute-form textarea {
+.contribute-form input,
+.contribute-form textarea {
   width: 100%;
   padding: 10px;
   margin-top: 6px;
   border-radius: 8px;
   border: 1px solid #ddd;
 }
-
-/* Courses video container */
 .courses-page .video-container {
   display: inline-block;
   border-radius: 12px;
   padding: 10px;
-  background: rgba(255,255,255,0.9);
-  margin-bottom: 12px;
+  background: #fff;
 }
-
-/* Quiz section */
 .quiz-section {
   margin-top: 12px;
 }
-
 .quiz-item {
   margin-bottom: 12px;
 }
-
 .submit-btn {
   background: #0056b3;
   color: white;
@@ -132,16 +100,4 @@ body {
   border-radius: 8px;
   border: none;
   cursor: pointer;
-}
-.submit-btn:hover {
-  background: #003d80;
-}
-
-/* Footer */
-footer {
-  background: rgba(255,255,255,0.9);
-  text-align: center;
-  padding: 12px;
-  margin-top: 40px;
-  border-top: 1px solid #ddd;
 }

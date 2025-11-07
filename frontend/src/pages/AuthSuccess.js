@@ -6,15 +6,17 @@ export default function AuthSuccess({ setUser }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios
-      .get("/auth/user", { withCredentials: true })
-      .then((res) => {
+    const fetchUser = async () => {
+      try {
+        const res = await axios.get("/auth/user", { withCredentials: true });
         setUser(res.data);
         navigate("/courses");
-      })
-      .catch(() => {
-        navigate("/"); 
-      });
+      } catch (err) {
+        navigate("/");
+      }
+    };
+    fetchUser();
   }, [navigate, setUser]);
-  return <div>Logging you in...</div>;
+
+  return <p>Logging in...</p>;
 }
