@@ -1,0 +1,67 @@
+.mindmap-fab {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #4f46e5;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: 0.3s ease;
+}
+
+.mindmap-fab:hover {
+  transform: scale(1.1);
+  background-color: #4338ca;
+}
+
+.mindmap-popup {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  width: 320px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  z-index: 999;
+  animation: slideUp 0.3s ease;
+}
+
+.mindmap-popup h3 {
+  margin-bottom: 10px;
+}
+
+.mindmap-popup input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.mindmap-popup button {
+  margin-top: 8px;
+  width: 100%;
+  background-color: #4f46e5;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.mindmap-result {
+  margin-top: 10px;
+  background: #f9fafb;
+  padding: 8px;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
