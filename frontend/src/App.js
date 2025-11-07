@@ -13,21 +13,31 @@ import "./App.css";
 function AppContent() {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
-
 useEffect(() => {
   const fetchUser = async () => {
     try {
       const res = await axios.get("/auth/user", { withCredentials: true });
       setUser(res.data);
-      if (window.location.pathname === "/" || window.location.pathname === "/profile") {
+
+      // Redirect to /courses only if not already there
+      if (
+        window.location.pathname === "/" ||
+        window.location.pathname === "/profile"
+      ) {
         navigate("/courses");
       }
     } catch (err) {
       setUser(null);
     }
   };
-  setTimeout(fetchUser, 300);
+
+  // Wait a tiny bit to ensure cookie from Google login is set
+  const timer = setTimeout(fetchUser, 500);
+
+  return () => clearTimeout(timer);
 }, [navigate]);
+
+
 
   return (
     <>
