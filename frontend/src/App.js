@@ -2,15 +2,14 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import axios from "./axiosConfig";
 
-import Home from "./pages/Home";
-import Courses from "./pages/Courses";
-import Contribute from "./pages/Contribute";
-import Profile from "./pages/Profile";
+import Home from "./pages/home";
+import Courses from "./pages/courses";
+import Contribute from "./pages/contribute";
+import Profile from "./pages/profile";
 import AuthSuccess from "./pages/AuthSuccess";
 import Header from "./components/Header";
 import MindmapBot from "./components/mindmapbot/mindmapbot";
 import "./App.css";
-
 function AppContent() {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
