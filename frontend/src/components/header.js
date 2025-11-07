@@ -42,7 +42,7 @@ export default function Header({ user, setUser }) {
           </>
         ) : (
           <a
-            href="http://localhost:5000/auth/google"
+            href="https://educraft-project.onrender.com/auth/google"
             className="small-btn"
           >
             Login with Google
