@@ -8,13 +8,13 @@ export default function Header({ user, setUser }) {
 
   const onLogout = async () => {
     try {
-      await axios.get("/auth/logout", { withCredentials: true });
-      setUser(null);
-      navigate("/");
-    } catch (err) {
-      console.error("Logout failed", err);
-    }
-  };
+    await axios.get("/auth/logout", { withCredentials: true });
+    setUser(null);
+    window.location.href = "/"; // redirect to home manually
+  } catch (err) {
+    console.error("Logout failed:", err);
+  }
+};
 
   return (
     <header className="header">
