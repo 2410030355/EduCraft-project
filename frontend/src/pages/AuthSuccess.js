@@ -10,9 +10,9 @@ export default function AuthSuccess({ setUser }) {
       try {
         const res = await axios.get("/auth/user", { withCredentials: true });
         setUser(res.data);
-        navigate("/courses");
+        navigate("/courses"); // redirect to courses immediately
       } catch (err) {
-        navigate("/");
+        navigate("/"); // fallback
       }
     };
     fetchUser();
