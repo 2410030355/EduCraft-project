@@ -1,20 +1,20 @@
-
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "../axiosConfig";
 import "./header.css";
+
 export default function Header({ user, setUser }) {
   const navigate = useNavigate();
 
   const onLogout = async () => {
     try {
-    await axios.get("/auth/logout", { withCredentials: true });
-    setUser(null);
-    window.location.href = "/"; // redirect to home manually
-  } catch (err) {
-    console.error("Logout failed:", err);
-  }
-};
+      await axios.get("/auth/logout");
+      setUser(null);
+      navigate("/");
+    } catch (err) {
+      console.error("Logout failed", err);
+    }
+  };
 
   return (
     <header className="header">
@@ -42,10 +42,10 @@ export default function Header({ user, setUser }) {
           </>
         ) : (
           <a
-            href="https://educraft-project.onrender.com/auth/google"
+            href={`${process.env.REACT_APP_BACKEND_URL}/auth/google`}
             className="small-btn"
           >
-            google login
+            Login with Google
           </a>
         )}
       </nav>
