@@ -5,10 +5,11 @@ body {
       rgba(255, 255, 255, 0.85),
       rgba(255, 255, 255, 0.85)
     ),
-    url("https://images.unsplash.com/photo-1554774853-7d4a7bb165e8?auto=format&fit=crop&w=1470&q=80")
+    url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1470&q=80")
       no-repeat center center fixed;
   background-size: cover;
   color: #222;
+  min-height: 100vh;
 }
 
 .header {
@@ -66,10 +67,10 @@ body {
 .home-container .login-box {
   margin: 20px auto;
   max-width: 420px;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255,255,255,0.95);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 .contribute-page,
 .courses-page {
