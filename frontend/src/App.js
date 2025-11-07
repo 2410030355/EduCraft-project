@@ -14,17 +14,20 @@ function AppContent() {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    axios
-      .get("/auth/user", { withCredentials: true })
-      .then((res) => {
-        setUser(res.data);
-        if (window.location.pathname === "/") {
-          navigate("/courses");
-        }
-      })
-      .catch(() => setUser(null));
-  }, [navigate]);
+useEffect(() => {
+  const fetchUser = async () => {
+    try {
+      const res = await axios.get("/auth/user", { withCredentials: true });
+      setUser(res.data);
+      if (window.location.pathname === "/" || window.location.pathname === "/profile") {
+        navigate("/courses");
+      }
+    } catch (err) {
+      setUser(null);
+    }
+  };
+  setTimeout(fetchUser, 300);
+}, [navigate]);
 
   return (
     <>
