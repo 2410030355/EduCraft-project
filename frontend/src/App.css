@@ -7,9 +7,17 @@ body {
   overflow-x: hidden;
 }
 
-header {
-  z-index: 50;
+html, body, #root {
+  height: 100%;
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 main {
-  min-height: calc(100vh - 140px);
+  flex-grow: 1;
+  padding-top: 20px;
 }

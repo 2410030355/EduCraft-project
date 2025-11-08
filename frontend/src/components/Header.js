@@ -22,6 +22,7 @@ export default function Header({ user, setUser }) {
         <img
           src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"
           alt="EduCraft"
+          style={{ width: 50, height: 50 }}
         />
         <div className="brand">
           <h1>EDUCRAFT</h1>

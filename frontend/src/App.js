@@ -28,9 +28,9 @@ function AppContent() {
   }, []);
 
   return (
-    <>
+    <div className="App">
       <Header user={user} setUser={setUser} />
-      <main style={{ paddingTop: 20, minHeight: "calc(100vh - 120px)" }}>
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/auth-success" element={<AuthSuccess setUser={setUser} />} />
@@ -43,7 +43,7 @@ function AppContent() {
       <footer style={{ textAlign: "center", padding: 12, background: "#f0f6ff" }}>
         © 2025 EDUCRAFT
       </footer>
-    </>
+    </div>
   );
 }
 
