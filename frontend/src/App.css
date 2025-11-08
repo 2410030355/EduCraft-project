@@ -6,9 +6,15 @@ body {
   color: #222;
   overflow-x: hidden;
 }
-
 html, body, #root {
   height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+  background: url("https://images.unsplash.com/photo-1554774853-7d4a7bb165e8?auto=format&fit=crop&w=1470&q=80") no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
+  overflow-x: hidden;
 }
 
 .App {
@@ -20,10 +26,4 @@ html, body, #root {
 main {
   flex-grow: 1;
   padding-top: 20px;
-}
-.page-content {
-  padding: 40px;
-  background: transparent; /* allows body background to show through */
-  min-height: calc(100vh - 140px); /* adjust for header/footer */
-  color: #fff; /* optional: for better contrast */
 }
