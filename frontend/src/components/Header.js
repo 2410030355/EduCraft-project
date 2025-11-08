@@ -41,13 +41,14 @@ export default function Header({ user, setUser }) {
             </button>
           </>
         ) : (
-          <a
-            href={`${process.env.REACT_APP_BACKEND_URL}/auth/google`}
-            className="small-btn"
-            style={{ background: "#67d5f0ff" }}
-          >
-            Login with Google
-          </a>
+         <a
+  href={`${process.env.REACT_APP_BACKEND_URL}/auth/google`}
+  className="small-btn"
+  style={{ background: "#67d5f0ff" }}
+>
+  Login with Google
+</a>
+
         )}
       </nav>
     </header>

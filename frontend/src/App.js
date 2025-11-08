@@ -30,13 +30,13 @@ function AppContent() {
     <>
       <Header user={user} setUser={setUser} />
       <main style={{ paddingTop: 20 }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/contribute" element={<Contribute />} />
-          <Route path="/profile" element={<Profile user={user} />} />
-          <Route path="/auth-success" element={<AuthSuccess setUser={setUser} />} />
-        </Routes>
+    <Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/courses" element={<Courses />} />
+  <Route path="/profile" element={<Profile user={user} />} />
+  <Route path="/contribute" element={<Contribute user={user} />} />
+  <Route path="/auth-success" element={<AuthSuccess setUser={setUser} />} />
+</Routes>
       </main>
       <MindmapBot />
       <footer style={{ textAlign: "center", padding: 12 }}>

@@ -1,20 +1,22 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "../axiosConfig";
 
 export default function AuthSuccess({ setUser }) {
+  const navigate = useNavigate();
+
   useEffect(() => {
     const fetchUser = async () => {
       try {
         const res = await axios.get("/auth/user", { withCredentials: true });
         setUser(res.data);
-        window.location.href = "/courses";
+        navigate("/courses");
       } catch (err) {
-        console.error("Failed to fetch user after auth", err);
-        window.location.href = "/";
+        navigate("/");
       }
     };
     fetchUser();
-  }, [setUser]);
+  }, [navigate, setUser]);
 
   return <div>Loading...</div>;
 }
