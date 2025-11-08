@@ -1,67 +1,15 @@
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
-  background: url("https://img.freepik.com/premium-photo/educational-concept-books-blue_387680-275.jpg?w=740")
-    no-repeat center center fixed;
+  background: url("https://images.unsplash.com/photo-1554774853-7d4a7bb165e8?auto=format&fit=crop&w=1470&q=80") no-repeat center center fixed;
   background-size: cover;
   color: #222;
-  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-.header {
-  background: linear-gradient(90deg, #81d4fa, #4fc3f7);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 22px;
-  position: sticky;
-  top: 0;
+header {
   z-index: 50;
 }
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.logo img {
-  width: 56px;
-  height: 56px;
-  border-radius: 10px;
-}
-.logo .brand h1 {
-  margin: 0;
-  font-size: 20px;
-}
-.logo .brand p {
-  margin: 0;
-  font-size: 12px;
-  opacity: 0.9;
-}
-
-.header nav a {
-  margin-left: 12px;
-  color: white;
-  text-decoration: none;
-}
-
-.start-btn,
-.small-btn {
-  background: #0a2e73;
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.small-btn {
-  margin-left: 10px;
-  font-size: 14px;
-}
-
-footer {
-  text-align: center;
-  padding: 12px;
-  background: rgba(255,255,255,0.85);
+main {
+  min-height: calc(100vh - 140px);
 }

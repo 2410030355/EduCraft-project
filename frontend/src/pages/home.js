@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import axios from "../axiosConfig";
-import { useNavigate } from "react-router-dom";
 import "./home.css";
 
 export default function Home() {
   const [form, setForm] = useState({ email: "", password: "", name: "" });
   const [msg, setMsg] = useState("");
-  const navigate = useNavigate();
 
   const signup = async (e) => {
     e.preventDefault();
@@ -17,7 +15,6 @@ export default function Home() {
         password: form.password,
       });
       setMsg(res.data.message || "Registered");
-      navigate("/auth-success");
     } catch (err) {
       setMsg(err.response?.data?.message || err.message);
     }
@@ -31,7 +28,7 @@ export default function Home() {
         password: form.password,
       });
       setMsg(res.data.message || "Logged in");
-      navigate("/auth-success");
+      window.location.href = "/auth-success";
     } catch (err) {
       setMsg(err.response?.data?.message || err.message);
     }
@@ -59,15 +56,11 @@ export default function Home() {
           value={form.password}
           onChange={(e) => setForm({ ...form, password: e.target.value })}
         />
-        <div style={{ display: "flex", gap: 8 }}>
-          <button onClick={login} className="start-btn">
-            Login
-          </button>
-          <button onClick={signup} className="start-btn">
-            Sign up
-          </button>
+        <div style={{ display: "flex", gap: 8, marginTop: 10 }}>
+          <button onClick={login} className="start-btn">Login</button>
+          <button onClick={signup} className="start-btn">Sign up</button>
         </div>
-        <div style={{ marginTop: 8, color: "green" }}>{msg}</div>
+        <div style={{ marginTop: 10, color: "green" }}>{msg}</div>
         <div style={{ marginTop: 12 }}>
           <a
             href={`${process.env.REACT_APP_BACKEND_URL}/auth/google`}

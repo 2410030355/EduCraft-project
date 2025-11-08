@@ -30,10 +30,7 @@ export default function AuthSuccess({ setUser }) {
     <div className="auth-success-container">
       <div className="auth-success-box">
         <h1>Welcome to EduCraft!</h1>
-        <p>
-          Learn, Contribute, and Grow 
-        </p>
-        <p>Click the button below to explore your courses:</p>
+        <p>Learn, Contribute, and Grow with thousands of educational resources.</p>
         <button onClick={goToCourses} className="start-btn">
           Go to Courses
         </button>

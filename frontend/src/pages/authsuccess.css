@@ -1,42 +1,43 @@
 .auth-success-container {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background: url("https://img.freepik.com/premium-photo/educational-concept-books-blue_387680-275.jpg") no-repeat center center fixed;
-  background-size: cover;
-  padding: 50px 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85); /* Slight transparent overlay on background */
   text-align: center;
-  color: #222;
 }
 
 .auth-success-box {
-  max-width: 500px;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 35px 30px;
+  background: white;
+  padding: 30px 40px;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
 }
 
 .auth-success-box h1 {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  color: #003366;
 }
 
 .auth-success-box p {
-  margin-bottom: 25px;
-  line-height: 1.5;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #222;
 }
 
-.start-btn {
+.auth-success-box .start-btn {
   background-color: #0056b3;
   color: white;
-  padding: 12px 25px;
   border: none;
+  padding: 10px 25px;
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
 }
 
-.start-btn:hover {
+.auth-success-box .start-btn:hover {
   background-color: #003366;
 }
