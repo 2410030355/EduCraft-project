@@ -2,16 +2,41 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 80px); /* adjust for header height */
-  padding: 20px;
+  min-height: 100vh;
+  background: url("https://img.freepik.com/premium-photo/educational-concept-books-blue_387680-275.jpg") no-repeat center center fixed;
+  background-size: cover;
+  padding: 50px 20px;
+  text-align: center;
+  color: #222;
 }
 
 .auth-success-box {
   max-width: 500px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 35px 30px;
   border-radius: 12px;
-  padding: 30px;
-  text-align: center;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.auth-success-box h1 {
+  margin-bottom: 15px;
+}
+
+.auth-success-box p {
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.start-btn {
+  background-color: #0056b3;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.start-btn:hover {
+  background-color: #003366;
 }

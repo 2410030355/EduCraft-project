@@ -1,32 +1,36 @@
 .home-container {
-  text-align: center;
-  padding: 50px;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  background: url("https://img.freepik.com/premium-photo/educational-concept-books-blue_387680-275.jpg") no-repeat center center fixed;
+  background-size: cover;
+  padding: 50px 20px;
+  color: #222;
 }
 
 .login-box {
-  margin: 30px auto;
-  max-width: 350px;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 20px;
+  width: 100%;
+  max-width: 360px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
 .login-box input {
   display: block;
   width: 100%;
-  margin: 10px 0;
+  margin: 12px 0;
   padding: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
 }
 
-.login-box button {
+.start-btn {
   background-color: #0056b3;
   color: white;
   padding: 10px 20px;
@@ -34,9 +38,9 @@
   border-radius: 8px;
   cursor: pointer;
   width: 100%;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
-.login-box button:hover {
+.start-btn:hover {
   background-color: #003366;
 }

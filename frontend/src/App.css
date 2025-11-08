@@ -19,69 +19,49 @@ body {
   top: 0;
   z-index: 50;
 }
-.logo { display: flex; align-items: center; gap: 12px; }
-.logo img { width: 56px; height: 56px; border-radius: 10px; }
-.logo .brand h1 { margin: 0; font-size: 20px; }
-.logo .brand p { margin: 0; font-size: 12px; opacity: 0.9; }
-.header nav a { margin-left: 12px; color: white; text-decoration: none; }
-.start-btn, .small-btn {
-  background: #0a2e73; color: #fff; border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer;
-}
-.small-btn { margin-left: 10px; font-size: 14px; }
-.home-container { text-align: center; padding: 40px; }
-.home-container .login-box {
-  margin: 20px auto;
-  max-width: 420px;
-  background: rgba(255, 255, 255, 0.85); /* slightly transparent */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* subtle shadow */
-}
-.contribute-page, .courses-page { max-width: 1000px; margin: 18px auto; padding: 12px; }
-.contribute-form input, .contribute-form textarea { width: 100%; padding: 10px; margin-top: 6px; border-radius: 8px; border: 1px solid #ddd; }
-.courses-page .video-container { display: inline-block; border-radius: 12px; padding: 10px; background: #fff; }
-.quiz-section { margin-top: 12px; }
-.quiz-item { margin-bottom: 12px; }
-.submit-btn { background: #0056b3; color: white; padding: 10px 16px; border-radius: 8px; border: none; cursor: pointer; }
-.page-container {
-  min-height: 100vh;
+
+.logo {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 80px;
-  background: linear-gradient(
-      rgba(240, 246, 255, 0.6),
-      rgba(240, 246, 255, 0.6)
-    ),
-    url("https://img.freepik.com/premium-photo/educational-concept-books-blue_387680-275.jpg?w=740")
-      no-repeat center center fixed;
-  background-size: cover;
-  width: 100%;
-  position: relative;
-  z-index: 1;
+  align-items: center;
+  gap: 12px;
+}
+.logo img {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+}
+.logo .brand h1 {
+  margin: 0;
+  font-size: 20px;
+}
+.logo .brand p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.9;
 }
 
-.content-box {
-  max-width: 500px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  padding: 30px 25px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.start-btn {
-  background-color: #0056b3;
+.header nav a {
+  margin-left: 12px;
   color: white;
-  padding: 10px 20px;
-  margin-top: 10px;
+  text-decoration: none;
+}
+
+.start-btn,
+.small-btn {
+  background: #0a2e73;
+  color: #fff;
   border: none;
+  padding: 8px 12px;
   border-radius: 8px;
   cursor: pointer;
-  width: 100%;
+}
+.small-btn {
+  margin-left: 10px;
+  font-size: 14px;
 }
 
-.start-btn:hover {
-  background-color: #003366;
+footer {
+  text-align: center;
+  padding: 12px;
+  background: rgba(255,255,255,0.85);
 }
