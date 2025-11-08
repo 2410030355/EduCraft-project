@@ -3,7 +3,7 @@ import "./contribute.css";
 
 export default function Contribute() {
   return (
-    <div className="contribute-page">
+    <div className="page-content contribute-page">
       <h2>Contribute</h2>
       <form className="contribute-form">
         <label htmlFor="name">Your Name</label>

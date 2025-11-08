@@ -3,6 +3,9 @@
   text-align: center;
   background: transparent;
   min-height: calc(100vh - 140px);
+  color:#fff
+  
+  ;
 }
 
 .profile-card {

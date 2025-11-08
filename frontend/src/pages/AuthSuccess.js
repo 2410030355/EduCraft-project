@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "../axiosConfig";
-import "./authsuccess.css"; // Make sure this matches your filename
+import "./authsuccess.css";
 
 export default function AuthSuccess({ setUser }) {
   const navigate = useNavigate();
@@ -24,7 +24,7 @@ export default function AuthSuccess({ setUser }) {
   }, [setUser, navigate]);
 
   return (
-    <div className="auth-success-container">
+    <div className="auth-success-container page-content">
       <div className="auth-success-box">
         {loading ? (
           <h2>Logging you in...</h2>
