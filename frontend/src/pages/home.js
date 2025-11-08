@@ -28,18 +28,18 @@ export default function Home() {
         password: form.password,
       });
       setMsg(res.data.message || "Logged in");
-      window.location.href = "/courses";
+      window.location.href = "/auth-success";
     } catch (err) {
       setMsg(err.response?.data?.message || err.message);
     }
   };
 
   return (
-    <div className="home-container">
-      <h1>Welcome to EduCraft</h1>
-      <p>Learn. Contribute. Grow.</p>
+    <div className="page-container">
+      <div className="content-box">
+        <h1>Welcome to EduCraft</h1>
+        <p>Learn. Contribute. Grow.</p>
 
-      <div className="login-box">
         <input
           placeholder="Full name (for signup)"
           value={form.name}
@@ -56,24 +56,17 @@ export default function Home() {
           value={form.password}
           onChange={(e) => setForm({ ...form, password: e.target.value })}
         />
-        <div style={{ display: "flex", gap: 8 }}>
-          <button onClick={login} className="start-btn">
-            Login
-          </button>
-          <button onClick={signup} className="start-btn">
-            Sign up
-          </button>
-        </div>
-        <div style={{ marginTop: 8, color: "green" }}>{msg}</div>
-        <div style={{ marginTop: 12 }}>
-          <a
-            href={`${process.env.REACT_APP_BACKEND_URL}/auth/google`}
-            className="start-btn"
-            style={{ background: "#db4437" }}
-          >
-            Sign in with Google
-          </a>
-        </div>
+        <button onClick={login} className="start-btn">Login</button>
+        <button onClick={signup} className="start-btn">Sign up</button>
+        <a
+          href={`${process.env.REACT_APP_BACKEND_URL}/auth/google`}
+          className="start-btn"
+          style={{ background: "#db4437" }}
+        >
+          Sign in with Google
+        </a>
+
+        {msg && <div style={{ marginTop: 10, color: "green" }}>{msg}</div>}
       </div>
     </div>
   );

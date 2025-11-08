@@ -46,3 +46,43 @@ body {
 .quiz-section { margin-top: 12px; }
 .quiz-item { margin-bottom: 12px; }
 .submit-btn { background: #0056b3; color: white; padding: 10px 16px; border-radius: 8px; border: none; cursor: pointer; }
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;
+  background: linear-gradient(
+      rgba(240, 246, 255, 0.6),
+      rgba(240, 246, 255, 0.6)
+    ),
+    url("https://img.freepik.com/premium-photo/educational-concept-books-blue_387680-275.jpg?w=740")
+      no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+}
+
+.content-box {
+  max-width: 500px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 30px 25px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.start-btn {
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.start-btn:hover {
+  background-color: #003366;
+}
