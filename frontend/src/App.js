@@ -4,12 +4,8 @@ import axios from "./axiosConfig";
 
 import Home from "./pages/home";
 import Courses from "./pages/courses";
-import Contribute from "./pages/contribute";
-import Profile from "./pages/profile";
 import AuthSuccess from "./pages/AuthSuccess";
-import Header from "./components/Header";
-import MindmapBot from "./components/mindmapbot/mindmapbot";
-import "./App.css";
+import Profile from "./pages/profile";
 
 function AppContent() {
   const [user, setUser] = useState(null);
@@ -19,7 +15,7 @@ function AppContent() {
       try {
         const res = await axios.get("/auth/user", { withCredentials: true });
         setUser(res.data);
-      } catch (err) {
+      } catch {
         setUser(null);
       }
     };
@@ -27,22 +23,12 @@ function AppContent() {
   }, []);
 
   return (
-    <>
-      <Header user={user} setUser={setUser} />
-      <main style={{ paddingTop: 20, minHeight: "calc(100vh - 140px)" }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/contribute" element={<Contribute />} />
-          <Route path="/profile" element={<Profile user={user} />} />
-          <Route path="/auth-success" element={<AuthSuccess setUser={setUser} />} />
-        </Routes>
-      </main>
-      <MindmapBot />
-      <footer style={{ textAlign: "center", padding: 12 }}>
-        © 2025 EDUCRAFT
-      </footer>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/auth-success" element={<AuthSuccess setUser={setUser} />} />
+      <Route path="/courses" element={<Courses />} />
+      <Route path="/profile" element={<Profile user={user} />} />
+    </Routes>
   );
 }
 
