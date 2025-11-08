@@ -1,12 +1,15 @@
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
-  background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-              url('https://in.images.search.yahoo.com/images/view;_ylt=AwrKF0rV4A5ptR4jcri9HAx.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkA2M2NzFlZTYyYWQ1MTM1M2MzZjI3YTE1OTYwYTE2MDJjBGdwb3MDMTA1BGl0A2Jpbmc-?back=https%3A%2F%2Fin.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dimages%2Brelated%2Bto%2Bedu%2Bwebpaged%26type%3DE210IN826G0%26fr%3Dmcafee%26fr2%3Dpiv-web%26nost%3D1%26tab%3Dorganic%26ri%3D105&w=626&h=264&imgurl=img.freepik.com%2Fpremium-photo%2Feducational-concept-books-blue_387680-275.jpg&rurl=https%3A%2F%2Fwww.freepik.com%2Fphotos%2Fbook-education-background&size=12KB&p=images+related+to+edu+webpaged&oid=c671ee62ad51353c3f27a15960a1602c&fr2=piv-web&fr=mcafee&tt=76%2C000%2B+Book+Education+Background+Pictures&b=61&ni=21&no=105&ts=&tab=organic&sigr=iuCOpIyEuGW6&sigb=waWNYWifHF18&sigi=tDnkSGid4Mhq&sigt=u9JZK2t8ufqe&.crumb=9L6l3quQkpI&fr=mcafee&fr2=piv-web&type=E210IN826G0') no-repeat center center fixed;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.85)
+    ),
+    url("https://png.pngtree.com/background/20250103/original/pngtree-blue-tech-education-concept-picture-image_15828429.jpg")
+      no-repeat center center fixed;
   background-size: cover;
   color: #222;
 }
-
 .header {
   background: linear-gradient(90deg, #81d4fa, #4fc3f7);
   color: white;
