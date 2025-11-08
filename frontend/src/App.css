@@ -1,15 +1,17 @@
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
+  /* Subtle overlay for readability */
   background: linear-gradient(
-      rgba(255, 255, 255, 0.85),
-      rgba(255, 255, 255, 0.85)
+      rgba(255, 255, 255, 0.25),  /* light overlay, allows the blue image to show */
+      rgba(255, 255, 255, 0.25)
     ),
     url("https://png.pngtree.com/background/20250103/original/pngtree-blue-tech-education-concept-picture-image_15828429.jpg")
       no-repeat center center fixed;
   background-size: cover;
   color: #222;
 }
+
 .header {
   background: linear-gradient(90deg, #81d4fa, #4fc3f7);
   color: white;
