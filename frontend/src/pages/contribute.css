@@ -1,15 +1,9 @@
 .contribute-page {
   text-align: center;
   padding: 30px;
-  background: transparent; /* allow body background to show */
+  background: transparent;
   min-height: 100vh;
-  color: #fff; /* optional: better contrast */
-}
-
-.contribute-page h2 {
-  color: #ffffff;
-  font-size: 2rem;
-  margin-bottom: 10px;
+  color: #fff;
 }
 
 .contribute-form {

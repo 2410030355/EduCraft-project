@@ -14,7 +14,7 @@ export default function AuthSuccess({ setUser }) {
         setStatus("Redirecting to Courses...");
         setTimeout(() => {
           navigate("/courses");
-        }, 800); // slight delay to ensure state updates
+        }, 800);
       } catch (err) {
         console.error("Auth failed", err);
         setStatus("Login failed. Redirecting to Home...");

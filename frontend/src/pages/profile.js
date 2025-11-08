@@ -1,21 +1,22 @@
 import React from "react";
-import MindmapBot from "../components/mindmapbot/mindmapbot";
 import "./profile.css";
 
 export default function Profile({ user }) {
-  if (!user) {
-    return <div style={{ textAlign: "center", marginTop: 50 }}>Please login to view your profile.</div>;
-  }
-
   return (
     <div className="profile-page">
-      <h2>Profile</h2>
-      <div className="profile-card">
-        <img src={user.picture} alt="Profile" />
-        <h3>{user.name}</h3>
-        <p>{user.email}</p>
-      </div>
-      <MindmapBot />
+      <h2>Your Profile</h2>
+      {user ? (
+        <div className="profile-card">
+          <img
+            src={user.picture || "https://cdn-icons-png.flaticon.com/512/3135/3135755.png"}
+            alt={user.name}
+          />
+          <h3>{user.name}</h3>
+          <p>Email: {user.email}</p>
+        </div>
+      ) : (
+        <p>Please log in to view your profile.</p>
+      )}
     </div>
   );
 }
