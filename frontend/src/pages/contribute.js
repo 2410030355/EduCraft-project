@@ -4,19 +4,24 @@ import "./contribute.css";
 export default function Contribute() {
   return (
     <div className="contribute-page">
-      <h2>Contribute to EduCraft</h2>
-      <p>Share your knowledge and help others learn!</p>
+      <h2>Contribute</h2>
       <form className="contribute-form">
-        <label htmlFor="title">Title</label>
-        <input type="text" id="title" placeholder="Enter topic title" />
+        <label htmlFor="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" />
 
-        <label htmlFor="description">Description</label>
-        <textarea id="description" rows="4" placeholder="Write your content here..." />
+        <label htmlFor="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" />
 
-        <label htmlFor="upload">Upload File</label>
-        <input type="file" id="upload" />
+        <label htmlFor="notes">Notes / Idea</label>
+        <textarea id="notes" rows="4" placeholder="Share your thoughts..." />
 
-        <button type="submit">Submit Contribution</button>
+        <label htmlFor="upload">Upload File (PDF, Image, Doc)</label>
+        <input type="file" id="upload" accept=".pdf,.doc,.docx,image/*" />
+
+        <div className="button-group">
+          <button type="submit" className="submit-btn">Submit Contribution</button>
+          <button type="button" className="cancel-btn">Cancel</button>
+        </div>
       </form>
     </div>
   );

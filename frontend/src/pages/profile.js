@@ -15,7 +15,7 @@ export default function Profile({ user }) {
           <p>Email: {user.email}</p>
         </div>
       ) : (
-        <p>Please log in to view your profile.</p>
+        <p style={{ color: "#fff" }}>Please log in to view your profile.</p>
       )}
     </div>
   );

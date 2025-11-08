@@ -1,16 +1,25 @@
 .profile-page {
-  padding: 20px;
+  padding: 40px 20px;
   text-align: center;
   background: transparent;
-  min-height: 100vh;
+  min-height: calc(100vh - 140px);
   color: #fff;
 }
 
 .profile-card {
   display: inline-block;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  color: #003366;
+}
+
+.profile-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
 }
