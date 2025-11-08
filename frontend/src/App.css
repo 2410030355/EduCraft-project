@@ -1,13 +1,6 @@
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.25),
-      rgba(255, 255, 255, 0.25)
-    ),
-    url("https://png.pngtree.com/background/20250103/original/pngtree-blue-tech-education-concept-picture-image_15828429.jpg")
-      no-repeat center center fixed;
-  background-size: cover;
   color: #222;
 }
 
@@ -60,6 +53,8 @@ body {
       no-repeat center center fixed;
   background-size: cover;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .content-box {
