@@ -22,19 +22,13 @@ export default function AuthSuccess({ setUser }) {
     fetchUser();
   }, [setUser]);
 
-  const goToCourses = () => {
-    navigate("/courses");
-  };
-
   return (
     <div className="auth-success-container">
-      <div className="auth-success-box">
-        <h1>Welcome to EduCraft!</h1>
-        <p>Learn, Contribute, and Grow with thousands of educational resources.</p>
-        <button onClick={goToCourses} className="start-btn">
-          Go to Courses
-        </button>
-      </div>
+      <h1>Welcome to EduCraft!</h1>
+      <p>Learn, Contribute, and Grow with thousands of educational resources.</p>
+      <button onClick={() => navigate("/courses")} className="start-btn">
+        Go to Courses
+      </button>
     </div>
   );
 }
