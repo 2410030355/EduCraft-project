@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "../axiosConfig";
+import "./authsuccess.css";
 
 export default function AuthSuccess({ setUser }) {
   const navigate = useNavigate();
@@ -8,15 +8,33 @@ export default function AuthSuccess({ setUser }) {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get("/auth/user", { withCredentials: true });
-        setUser(res.data);
-        navigate("/courses");
+        const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/user`, {
+          credentials: "include",
+        });
+        const data = await res.json();
+        if (res.ok && data) {
+          setUser(data);
+        }
       } catch (err) {
-        navigate("/");
+        console.error("Failed to fetch user:", err);
       }
     };
     fetchUser();
-  }, [navigate, setUser]);
+  }, [setUser]);
 
-  return <div>Loading...</div>;
+  const goToCourses = () => {
+    navigate("/courses");
+  };
+
+  return (
+    <div className="auth-success-container">
+      <div className="auth-success-box">
+        <h1>Welcome to EduCraft!</h1>
+        <p>Learn, Contribute, and Grow with thousands of educational resources.</p>
+        <button onClick={goToCourses} className="start-btn">
+          Go to Courses
+        </button>
+      </div>
+    </div>
+  );
 }

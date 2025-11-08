@@ -40,7 +40,6 @@ body {
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* subtle shadow */
 }
-
 .contribute-page, .courses-page { max-width: 1000px; margin: 18px auto; padding: 12px; }
 .contribute-form input, .contribute-form textarea { width: 100%; padding: 10px; margin-top: 6px; border-radius: 8px; border: 1px solid #ddd; }
 .courses-page .video-container { display: inline-block; border-radius: 12px; padding: 10px; background: #fff; }
