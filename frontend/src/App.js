@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import axios from "./axiosConfig";
+
 import Home from "./pages/home";
 import Courses from "./pages/courses";
 import Contribute from "./pages/contribute";
@@ -30,13 +31,13 @@ function AppContent() {
     <>
       <Header user={user} setUser={setUser} />
       <main style={{ paddingTop: 20 }}>
-    <Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/courses" element={<Courses />} />
-  <Route path="/profile" element={<Profile user={user} />} />
-  <Route path="/contribute" element={<Contribute user={user} />} />
-  <Route path="/auth-success" element={<AuthSuccess setUser={setUser} />} />
-</Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/profile" element={<Profile user={user} />} />
+          <Route path="/contribute" element={<Contribute user={user} />} />
+          <Route path="/auth-success" element={<AuthSuccess setUser={setUser} />} />
+        </Routes>
       </main>
       <MindmapBot />
       <footer style={{ textAlign: "center", padding: 12 }}>

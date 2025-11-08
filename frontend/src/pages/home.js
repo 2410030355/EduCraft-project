@@ -38,6 +38,7 @@ export default function Home() {
     <div className="home-container">
       <h1>Welcome to EduCraft</h1>
       <p>Learn. Contribute. Grow.</p>
+
       <div className="login-box">
         <input
           placeholder="Full name (for signup)"
@@ -65,14 +66,13 @@ export default function Home() {
         </div>
         <div style={{ marginTop: 8, color: "green" }}>{msg}</div>
         <div style={{ marginTop: 12 }}>
-         <a
-  href={`${process.env.REACT_APP_BACKEND_URL}/auth/google`}
-  className="small-btn"
-  style={{ background: "#67d5f0ff" }}
->
-  Login with Google
-</a>
-
+          <a
+            href={`${process.env.REACT_APP_BACKEND_URL}/auth/google`}
+            className="start-btn"
+            style={{ background: "#db4437" }}
+          >
+            Sign in with Google
+          </a>
         </div>
       </div>
     </div>

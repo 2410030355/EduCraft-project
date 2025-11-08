@@ -2,10 +2,11 @@ body {
   margin: 0;
   font-family: Poppins, sans-serif;
   background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-              url('https://images.unsplash.com/photo-1554774853-7d4a7bb165e8?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+              url('https://in.images.search.yahoo.com/images/view;_ylt=AwrKF0rV4A5ptR4jcri9HAx.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkA2M2NzFlZTYyYWQ1MTM1M2MzZjI3YTE1OTYwYTE2MDJjBGdwb3MDMTA1BGl0A2Jpbmc-?back=https%3A%2F%2Fin.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dimages%2Brelated%2Bto%2Bedu%2Bwebpaged%26type%3DE210IN826G0%26fr%3Dmcafee%26fr2%3Dpiv-web%26nost%3D1%26tab%3Dorganic%26ri%3D105&w=626&h=264&imgurl=img.freepik.com%2Fpremium-photo%2Feducational-concept-books-blue_387680-275.jpg&rurl=https%3A%2F%2Fwww.freepik.com%2Fphotos%2Fbook-education-background&size=12KB&p=images+related+to+edu+webpaged&oid=c671ee62ad51353c3f27a15960a1602c&fr2=piv-web&fr=mcafee&tt=76%2C000%2B+Book+Education+Background+Pictures&b=61&ni=21&no=105&ts=&tab=organic&sigr=iuCOpIyEuGW6&sigb=waWNYWifHF18&sigi=tDnkSGid4Mhq&sigt=u9JZK2t8ufqe&.crumb=9L6l3quQkpI&fr=mcafee&fr2=piv-web&type=E210IN826G0') no-repeat center center fixed;
   background-size: cover;
   color: #222;
 }
+
 .header {
   background: linear-gradient(90deg, #81d4fa, #4fc3f7);
   color: white;
@@ -17,47 +18,16 @@ body {
   top: 0;
   z-index: 50;
 }
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { width: 56px; height: 56px; border-radius: 10px; }
+.logo .brand h1 { margin: 0; font-size: 20px; }
+.logo .brand p { margin: 0; font-size: 12px; opacity: 0.9; }
+.header nav a { margin-left: 12px; color: white; text-decoration: none; }
+.start-btn, .small-btn {
+  background: #0a2e73; color: #fff; border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer;
 }
-.logo img {
-  width: 56px;
-  height: 56px;
-  border-radius: 10px;
-}
-.logo .brand h1 {
-  margin: 0;
-  font-size: 20px;
-}
-.logo .brand p {
-  margin: 0;
-  font-size: 12px;
-  opacity: 0.9;
-}
-.header nav a {
-  margin-left: 12px;
-  color: white;
-  text-decoration: none;
-}
-.start-btn,
-.small-btn {
-  background: #0a2e73;
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.small-btn {
-  margin-left: 10px;
-  font-size: 14px;
-}
-.home-container {
-  text-align: center;
-  padding: 40px;
-}
+.small-btn { margin-left: 10px; font-size: 14px; }
+.home-container { text-align: center; padding: 40px; }
 .home-container .login-box {
   margin: 20px auto;
   max-width: 420px;
@@ -66,37 +36,9 @@ body {
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
-.contribute-page,
-.courses-page {
-  max-width: 1000px;
-  margin: 18px auto;
-  padding: 12px;
-}
-.contribute-form input,
-.contribute-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 6px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-}
-.courses-page .video-container {
-  display: inline-block;
-  border-radius: 12px;
-  padding: 10px;
-  background: #fff;
-}
-.quiz-section {
-  margin-top: 12px;
-}
-.quiz-item {
-  margin-bottom: 12px;
-}
-.submit-btn {
-  background: #0056b3;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-}
+.contribute-page, .courses-page { max-width: 1000px; margin: 18px auto; padding: 12px; }
+.contribute-form input, .contribute-form textarea { width: 100%; padding: 10px; margin-top: 6px; border-radius: 8px; border: 1px solid #ddd; }
+.courses-page .video-container { display: inline-block; border-radius: 12px; padding: 10px; background: #fff; }
+.quiz-section { margin-top: 12px; }
+.quiz-item { margin-bottom: 12px; }
+.submit-btn { background: #0056b3; color: white; padding: 10px 16px; border-radius: 8px; border: none; cursor: pointer; }
