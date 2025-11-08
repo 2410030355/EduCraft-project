@@ -2,27 +2,19 @@
   text-align: center;
   padding: 50px;
   min-height: 100vh;
-  background: linear-gradient(
-      rgba(240, 246, 255, 0.6),
-      rgba(240, 246, 255, 0.6)
-    ),
-    url("https://img.freepik.com/premium-photo/educational-concept-books-blue_387680-275.jpg?w=740") 
-      no-repeat center center fixed;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #222;
 }
 
 .login-box {
   margin: 30px auto;
-  max-width: 300px;
-  background: rgba(255, 255, 255, 0.95);
+  max-width: 350px;
+  background: rgba(255, 255, 255, 0.85);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .login-box input {

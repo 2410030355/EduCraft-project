@@ -1,7 +1,11 @@
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
+  background: url("https://img.freepik.com/premium-photo/educational-concept-books-blue_387680-275.jpg?w=740")
+    no-repeat center center fixed;
+  background-size: cover;
   color: #222;
+  min-height: 100vh;
 }
 
 .header {
