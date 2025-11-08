@@ -21,3 +21,9 @@ main {
   flex-grow: 1;
   padding-top: 20px;
 }
+.page-content {
+  padding: 40px;
+  background: transparent; /* allows body background to show through */
+  min-height: calc(100vh - 140px); /* adjust for header/footer */
+  color: #fff; /* optional: for better contrast */
+}
